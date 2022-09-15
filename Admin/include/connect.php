@@ -1,5 +1,5 @@
 
 <?php
-$conn=mysqli_connect("localhost","root","","u143481292_newgopali_123");
+$conn=mysqli_connect("u766367794_light","root","","u143481292_newgopali_123");
 ?>
 
