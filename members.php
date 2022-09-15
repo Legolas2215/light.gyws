@@ -336,41 +336,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 menu-item hidden">
-                        <div class="speaker-layout3">
-                            <img src="img/Nimisha.jpg" alt="speaker" class="img-fluid">
-                            <div class="item-title">
-                                <h3 class="title title-bold color-light hover-yellow">
-                                    <a href="single-speaker.html">Nimisha Singh</a>
-                                </h3>
-                                <div class="title-light size-md text-left color-light">Public Relations and Marketing Head, LiGHT</div>
-                            </div>
-                            <div class="item-social">
-                                <ul>
-                                    <li>
-                                        <a href="#" title="facebook">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="twitter">
-                                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="linkedin">
-                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="pinterest">
-                                            <i class="fa fa-pinterest" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 menu-item hidden">
                         <div class="speaker-layout3">
                             <img src="img/rishabh.jpg" alt="speaker" class="img-fluid">
