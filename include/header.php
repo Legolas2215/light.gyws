@@ -3,12 +3,12 @@
 include 'login-member/config.php';
 session_start();
 
- $user_id = $_SESSION['id'];
+//  $user_id = $_SESSION['id'];
 
 error_reporting(0)
 ?>
         <header id="header" class="header-section">
-            <div class="top-header">
+            <!-- <div class="top-header">
                 <div class="container">
                     <div class="top-content-wrap row">
                         <div class="col-sm-12">
@@ -54,7 +54,7 @@ error_reporting(0)
                         
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="bottom-header">
                 <div class="container">
                     <div class="bottom-content-wrap row">
@@ -81,7 +81,7 @@ error_reporting(0)
                                 </li>
                                   
                                     
-                                    <li><a href="network.php">Our Network</a></li>
+                                    <li><a href="network.php">Join Us</a></li>
                                     <li><a href="members.php">Members</a></li>
                                          
                                 </li>

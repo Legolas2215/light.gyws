@@ -18,7 +18,7 @@
                     <div class="table-cell">
                         <div class="container">
                             <div class="slider-text">
-                                <h5 class="wow cssanimation fadeInBottom">About Us</h5>
+                                <h5 class="wow cssanimation fadeInBottom"></h5>
                                 <h1 class="wow cssanimation leFadeInRight sequence">Bring LiGHT to your campus</h1>
                                 <p class="wow cssanimation fadeInTop" data-wow-delay="1s">Apply for a LiGHT Center in your college and empower <br>your college students to be a Change Maker </p>
                                 <a href="contact-us.php" class="default-btn wow cssanimation fadeInBottom" data-wow-delay="0.8s">Join With Us</a>
@@ -113,21 +113,21 @@
                 <li class="col-md-3 col-sm-6 sm-padding">
                     <div class="counter-content">
                         <i class="ti-money"></i>
-                        <h3 class="counter">12</h3>
+                        <h3 class="counter">16</h3>
                         <h4 class="text-white">Centers</h4>
                     </div>
                 </li>
                 <li class="col-md-3 col-sm-6 sm-padding">
                     <div class="counter-content">
                         <i class="ti-face-smile"></i>
-                        <h3 class="counter">10</h3>
+                        <h3 class="counter">11</h3>
                         <h4 class="text-white">States</h4>
                     </div>
                 </li>
                 <li class="col-md-3 col-sm-6 sm-padding">
                     <div class="counter-content">
                         <i class="ti-user"></i>
-                        <h3 class="counter">300</h3>
+                        <h3 class="counter">400</h3>
                         <h4 class="text-white">Active Members</h4>
                     </div>
                 </li>
@@ -320,10 +320,10 @@
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Hummingbird News</h3>
-                            <p>The online workshop was conducted in collaboration with Ek Tara- a registered trust in Kolkata, free of cost for the teachers of class LKG-5. </p>
+                            <h3>Dainik Bhaskar</h3>
+                            <p>LiGHT Raipur (students from NIT Raipur) raised funds to donate fan and cooler to special school students. <br> &nbsp;</p>
 
-                            <a href="#" class="read-more">Read More</a>
+                            <!-- <a href="#" class="read-more">Read More</a> -->
                         </div>
                     </div>
                 </div><!-- /Causes-1 -->
@@ -337,10 +337,10 @@
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Telegraph</h3>
-                            <p>A group of IITians, who have taken education beyond the hallowed campus to turn a village around, has set its sight on an initiative called �greenovation�</p>
+                            <h3>Lokmat</h3>
+                            <p>LiGHT Wardha(students from Bajaj Institute of Technology, Wardha) raised funds to donate Water Purifier to Sankalp Orphanage </p>
 
-                            <a href="#" class="read-more">Read More</a>
+                            <!-- <a href="#" class="read-more">Read More</a> -->
                         </div>
                     </div>
                 </div><!-- /Causes-2 -->
@@ -354,10 +354,10 @@
                             </div>
                         </div>
                         <div class="causes-details">
-                            <h3>Former MHRD Minister (Dr. Ramesh Pokhriyal)</h3>
-                            <p>IIT Kgp students are helping the poor in villages around their campus by providing them with essential goods.</p>
+                            <h3>Pudhari</h3>
+                            <p>LiGHT Samvedna raised funds to donate orphanage to children of Bhagwaan Baba Balika Ashram Orphanage <br> &nbsp;</p>
 
-                            <a href="#" class="read-more">Read More</a>
+                            <!-- <a href="#" class="read-more">Read More</a> -->
                         </div>
                     </div>
                 </div><!-- /Causes-3 -->

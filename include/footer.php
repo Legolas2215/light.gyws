@@ -78,7 +78,7 @@ West Bengal, Pin-721145.</li>
                 </div>
 			</div>
 		</footer><!-- /Footer Section -->
-        <a href="https://api.whatsapp.com/send?phone=918957557713&amp;text=Hi" class="whatsApp" target="_blank" datasqstyle="{&quot;top&quot;:null}" datasquuid="ca02102c-3d6e-4d06-a85e-351523545b06" datasqtop="663" style="top: 663px;"><img src="https://c.tenor.com/Spdlu7aT88AAAAAj/wp.gif" alt="phone" class="whts01" style="height: 63px;"></a>
+        <!-- <a href="https://api.whatsapp.com/send?phone=918957557713&amp;text=Hi" class="whatsApp" target="_blank" datasqstyle="{&quot;top&quot;:null}" datasquuid="ca02102c-3d6e-4d06-a85e-351523545b06" datasqtop="663" style="top: 663px;"><img src="https://c.tenor.com/Spdlu7aT88AAAAAj/wp.gif" alt="phone" class="whts01" style="height: 63px;"></a> -->
 		<a data-scroll href="#header" id="scroll-to-top"><i class="arrow_up"></i></a>
 	
 		<!-- jQuery Lib -->

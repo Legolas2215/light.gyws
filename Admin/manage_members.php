@@ -60,7 +60,7 @@ include 'header.php';
 
 
         <div class="alert alert-success">
-             <strong>Success!</strong> You Are Update Success...
+             <strong>Success!</strong> Update Success...
             </div>
 
                           <?php 
@@ -121,6 +121,7 @@ include 'header.php';
                     <th>Post/ Desgination</th>
                     <th>Centre/Branch</th>
                     <th>Action</th>
+                    <th>Image</th>
                     <th>Approval</th>
 
                   </tr>
@@ -147,13 +148,14 @@ include 'header.php';
                        <td><?php echo $row['Year Of Joining'] ?></td>
                       <td><?php echo $row['Post/ Desgination'] ?></td>
                       <td><?php echo $row['CentreBranch'] ?></td>
+
                      <td>
                       <a href="edit.php?id=<?php echo $row['id'];?>">
                       <i class='far fa-edit' style='font-size:24px;color:green'></i></a>
                       <a href="delite.php?id=<?php echo $row['id']?>"><i class='fas fa-trash-alt' style='font-size:24px;color:red'></i></a>
                       <i class='far fa-eye' style='font-size:24px;color:red'></i>
                     </td>
-
+                    <td><?php echo $row['image'] ?></td>
                     <td>
                       <?php
 

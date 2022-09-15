@@ -72,7 +72,7 @@
     $('#event-carousel').owlCarousel({
         loop: true,
         margin: 15,
-        autoplay: false,
+        autoplay: true,
         smartSpeed: 500,
         nav: true,
         navText: ['<i class="ti-arrow-left"></i>', '<i class="ti-arrow-right"></i>'],
@@ -133,9 +133,10 @@
 =========================================================================*/
 	$('#testimonial-carousel').owlCarousel({
         loop: true,
-        margin: 15,
+        margin: 5,
         autoplay: true,
-        smartSpeed: 500,
+        smartSpeed: 1000,
+        time: 10,
         items: 1,
         nav: false,
         dots: true,
@@ -158,6 +159,32 @@
 		}
     });
 
+    $('#testimonial-carousel2').owlCarousel({
+        loop: true,
+        margin: 15,
+        autoplay: true,
+        smartSpeed: 100,
+        items: 1,
+        nav: false,
+        dots: true,
+        responsive : {
+			0 : {
+				items: 1,
+                items: 1,
+                items: 1,
+                items: 1,
+			},
+			// 480 : {
+			// 	items: 2,
+			// },
+			// 768 : {
+			// 	items: 2
+			// },
+			// 992 : {
+			// 	items: 3
+			// }
+		}
+    });
 /*=========================================================================
         Sponsor Carousel
 =========================================================================*/

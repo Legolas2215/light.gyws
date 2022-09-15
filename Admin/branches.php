@@ -2,7 +2,7 @@
 error_reporting(0);
 include 'include/connect.php';
 
-if (isset($_POST['branche'])) 
+if (isset($_POST['branches'])) 
 {
 	$collage = $_POST['collage'];
 	$center = $_POST['center'];
@@ -15,7 +15,7 @@ if (isset($_POST['branche']))
 	$head = $_POST['head'];
 	$coodinoter = $_POST['coodinoter'];
 
-	$sql = "INSERT INTO `add_branches`(`Collage Name`, `Center Name`, `Center ID`, `City`, `State`, `Year Of Joining`, `No_Members`, `Branches`, `Center Head`, `Center Coordinator`) VALUES ('$collage','$center','$centerid','$city','$state','$year_of_joining','$No_of_Members','$branche','$head','$coodinoter')";
+	$sql = "INSERT INTO `add_branches`(`Collage Name`, `Center Name`, `Center ID`, `City`, `State`, `Year Of Joining`, `No_Members`, `catagury`, `Center Head`, `Center Coordinator`) VALUES ('$collage','$center','$centerid','$city','$state','$year_of_joining','$No_of_Members','$catagury','$head','$coodinoter')";
 
 	$run = mysqli_query($conn,$sql);
 
@@ -29,9 +29,6 @@ if (isset($_POST['branche']))
 		
 	}
 }
-
-
-
 
 
 ?>

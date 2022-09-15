@@ -11,7 +11,7 @@ while ($data = mysqli_fetch_assoc($rsult))
 {
   ?>
 
- <div class="col-md-2.5 xs-padding">
+ <div class="col-md-3 xs-padding">
                                 <a href="member-details.php?id=<?php echo $data['id'] ?>">
                                 <div class="team-details">
                                    <img src="./Admin/members_pic/<?php echo $data['image'] ?>" alt="team" style="height: 250px; cursor: pointer;">

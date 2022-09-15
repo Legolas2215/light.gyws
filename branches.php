@@ -18,10 +18,10 @@ if (isset($_GET['serch'])) {
     <div class="pager-header">
         <div class="container">
             <div class="page-content">
-                <h2>Branches</h2>
+                <h2>Centers</h2>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Branches</li>
+                    <li class="breadcrumb-item active">Centers</li>
                 </ol>
             </div>
         </div>
@@ -123,6 +123,76 @@ if (isset($_GET['serch'])) {
     <!-- /About Section -->
 
 
+    <!-- #intro-->
+
+
+    <!-- Map Section-->
+    <div style="margin-top: 70px" class="container-fluid justify-content-center">
+        <div class="row">
+            <!-- Map Part-->
+            <div class="col-md-6 justify-content-center ml-auto">
+                <!-- <h2>map</h2>-->
+                <center>
+                    <div style="width: 75%;">
+                        <div id="map"></div>
+                    </div>
+                </center>
+            </div>
+            <div class="col-md-6">
+
+                <div class="section-heading text-center mb-40">
+                    <h2 style="margin-top: 20px;">Our Reach</h2>
+                    <span class="heading-border"></span>
+                    <!-- <p>We always believe that building a forest is much better than building a tree, and so the social workers, along with building their respective social initiatives (their own trees) can support and share their experiences with our members to help us shape the mindset of youth who can build the forest of social initiatives in the future.</p> -->
+                </div><!-- /Section Heading -->
+                <section id="counter" class="">
+                    <div class="container">
+                        <ul class="row counters">
+                            <li class="col-md-4 col-sm-6 sm-padding">
+                                <div class="counter-content">
+                                    <i class="ti-money"></i>
+                                    <h3>16</h3>
+                                    <h4>Centers</h4>
+                                </div>
+                            </li>
+                            <li class="col-md-4 col-sm-6 sm-padding">
+                                <div class="counter-content">
+                                    <i class="ti-face-smile"></i>
+                                    <h3>11</h3>
+                                    <h4>States</h4>
+                                </div>
+                            </li>
+                            <li class="col-md-4 col-sm-6 sm-padding">
+                                <div class="counter-content">
+                                    <i class="ti-user"></i>
+                                    <h3>400</h3>
+                                    <h4>Active Members</h4>
+                                </div>
+                            </li>
+                            <!-- <li class="col-md-3 col-sm-6 sm-padding">
+                        <div class="counter-content">
+                            <i class="ti-comments"></i>
+                            <h3 class="counter">669</h3>
+                            <h4 class="text-white">Positive Feedbacks</h4>
+                        </div>
+                    </li> -->
+                        </ul>
+                    </div>
+            </div>
+            </section><!-- Counter Section -->
+
+        </div>
+    </div><!-- --------------------------------------------map section End -------------------------------------->
+
+
+
+
+
+
+
+
+
+
     <!-- schedule Section -->
 
     <section class="schedule-section">
@@ -144,9 +214,9 @@ if (isset($_GET['serch'])) {
                 <span class="title"></span>
 
                 <h2>Timeline</h2>
+                <span class="heading-border"></span>
 
             </div>
-
 
 
             <div class="schedule-tabs tabs-box">
@@ -804,27 +874,18 @@ if (isset($_GET['serch'])) {
     <section class="team-section bg-grey bd-bottom padding">
 
         <div class="container-fluid">
-            <h3 class="text-center mb-40">All Branches</h3>
-            <form action="" method="post" class="form-horizontal">
+
+            <div class="section-heading text-center mb-40">
+                <h2 style="margin-top: 20px;">All Branches</h2>
+                <span class="heading-border"></span>
+                <!-- <p>We always believe that building a forest is much better than building a tree, and so the social workers, along with building their respective social initiatives (their own trees) can support and share their experiences with our members to help us shape the mindset of youth who can build the forest of social initiatives in the future.</p> -->
+            </div><!-- /Section Heading -->
+            <!-- <form action="" method="post" class="form-horizontal">
                 <div class="form-group colum-row row">
-                    <!-- <div class="col-sm-2">
-                        <select style="height: 48px;" class="form-control">
-                            <option>Select Filter</option>
-                            <option>Categorywish</option>
-                            <option>Yearwish</option>
-                            <option>Statewise</option>
-
-                        </select>
-                    </div> -->
-
-                    <!-- <div class="col-sm-2">
-                            <input type="text" name="newserch" id="live_serch" class="form-control">
-                                    </div> -->
-
-                    <div class="col-sm-2">
+                                        <div class="col-sm-2">
                         <div class="form-group">
-                            <select class="browser-default custom-select" name="No_of_Members" id="branch" onchange="newfilter()">
-                                <option selected>Select Branches</option>
+                            <select class="browser-default custom-select" name="No_of_Members" id="State" onchange="newfilter()">
+                                <option selected>Select State</option>
 
                                 <?php
                                 $sql = "SELECT * FROM `add_branches`";
@@ -832,12 +893,10 @@ if (isset($_GET['serch'])) {
 
                                 while ($row = mysqli_fetch_assoc($run)) {
                                 ?>
-                                    <option value="<?php echo $row['Collage Name'] ?>"><?php echo $row['Collage Name'] ?></option>
+                                    <option value="<?php echo $row['State'] ?>"><?php echo $row['State'] ?></option>
 
                                 <?php
                                 }
-
-
 
                                 ?>
 
@@ -851,7 +910,7 @@ if (isset($_GET['serch'])) {
                             <option selected>Select Year</option>
 
                             <?php
-                            $sql = "SELECT * FROM `add_branches`";
+                            $sql = "SELECT  DISTINCT `Year Of Joining` FROM `add_branches` ";
                             $run = mysqli_query($conn, $sql);
 
                             while ($row = mysqli_fetch_assoc($run)) {
@@ -861,17 +920,11 @@ if (isset($_GET['serch'])) {
                             <?php
                             }
 
-
-
                             ?>
 
                         </select>
                     </div>
-
-
-
-
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                         <button id="submit" name="serch" id="live_serch" class="default-btn" type="submit">Reset</button>
                     </div>
 
@@ -880,53 +933,80 @@ if (isset($_GET['serch'])) {
                     </div>
 
                 </div>
-            </form>
-            <div class="team-wrapper row" id="brnc">
+            </form> -->
 
-                <?php
+            <!-- <div class="team-wrapper row">
 
-                $sql = "SELECT * FROM `add_branches`";
-                $rsult = mysqli_query($conn, $sql);
+                <div class="col-lg-12 sm-padding">
+                    <?php
 
-                while ($data = mysqli_fetch_assoc($rsult)) {
-                ?>
+                    $sql = "SELECT * FROM `add_branches`";
+                    $rsult = mysqli_query($conn, $sql);
 
-                    <div class="col-lg-12 xs-padding">
-                        <div class="blog-items grid-list row" style="flex-wrap: nowrap;">
+                    while ($data = mysqli_fetch_assoc($rsult)) {
+                    ?>
+
+                        <div class="col-lg-12 xs-padding">
+                            <div class=" grid-list row" style="flex-wrap:wrap">
+                                <div class="col-md-4 padding-15 text-center">
+                                    <div class="blog-post">
+                                        <a href="branches-data.php?branche=<?php echo $data['Collage Name'] ?>">
+                                            <div class="blog-content">
+                                                <h3><?php echo $data['Center Name'] ?></h3>
+                                                <h4></i><?php echo $data['Collage Name'] ?></h4>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            <?php } ?>
+
+                            </div>
+
+                        </div>
+                </div>
+            </div> -->
+
+            <div class="team-wrapper row">
+
+                <div class="col-lg-12 xs-padding">
+                    <div class="blog-items grid-list row">
+                        <?php
+
+                        $result = mysqli_query($conn, "SELECT * FROM add_branches");
+                        while ($data = mysqli_fetch_array($result)) {
 
 
-                            <div class="col-md-2 padding-15 text-center">
+                        ?>
+
+                            <div class="col-md-4 padding-15 text-center">
                                 <div class="blog-post">
-                                    <a href="branches-data.php?branche=<?php echo $data['Collage Name'] ?>">
+                                    <a href="branches-data.php?id=<?php echo $data['id'] ?>">
                                         <div class="blog-content">
 
-                                            <h3><?php echo $data['Collage Name'] ?></h3>
-                                            <h4></i><?php echo $data['State'] ?></h4>
+                                            <h3><?php echo $data['Center Name'] ?></h3>
+                                            <h4></i><?php echo $data['Collage Name'] ?></h4>
+                                            <!-- <span class="date"><i class="fa fa-calendar"> -->
 
-
-
+                                            </i> <?php echo $data['time_stam'] ?></span>
                                         </div>
                                     </a>
                                 </div>
                             </div><!-- Post 1 -->
 
+                        <?php } ?>
 
 
+                    </div>
 
-                        <?php
-                    }
-
-
-                        ?>
-
-
-
-
-                        </div>
-
-                    </div><!-- Blog Posts -->
+                </div><!-- Blog Posts -->
             </div>
+
         </div>
+
+
+
+
 
     </section><!-- /Team Section -->
     <!-- <section class="row bg-grey bd-bottom padding">
@@ -945,7 +1025,7 @@ if (isset($_GET['serch'])) {
 
     <script type="text/javascript">
         function newfilter() {
-            var x = document.getElementById("branch").value;
+            var x = document.getElementById("State").value;
 
             $.ajax({
 
@@ -991,3 +1071,10 @@ if (isset($_GET['serch'])) {
     </script>
 
     <script src="js/script.js"></script>
+    <script src="js/main.html"></script><!-- Map Section-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="networkJS/jquery.counterup.min.js"></script>
+    <script src="js/centermain.js"></script><!-- new map-->
+    <script src="js/mapdata.js"></script>
+    <script src="js/countrymap.js"></script><!-- map section js end-->

@@ -824,9 +824,9 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     font-size: 22px;
 }
 .profile-wrap .profile{
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
     border-radius: 50%;
 }
 

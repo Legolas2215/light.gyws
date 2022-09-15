@@ -27,6 +27,7 @@
         <div class="container">
             <div class="section-heading text-center mb-40">
                 <h2>Featured Events</h2>
+                <span class="heading-border"></span>
                 <!-- <span class="heading-border"></span>
                     <p>Help today because tomorrow you may be the one who <br> needs more helping!</p> -->
             </div><!-- /Section Heading -->
@@ -161,6 +162,132 @@
     </section><!-- Events Section -->
 
 
+    <!-- Testimonial Section -->
+    <section class="team-section bg-grey bd-bottom padding">
+        <div class="container-fluid" id="filter">
+            <div class="section-heading text-center ">
+                <h2>All Events</h2>
+                <span class="heading-border"></span>
+            </div><!-- /Section Heading -->
+
+            <form action="" method="POST" class="form-horizontal">
+                <div class="form-group colum-row row">
+                    <!-- <div class="col-sm-2">
+                        <div class="form-group">
+                            <select class="browser-default custom-select" name="No_of_Members" id="insative" onchange="serchinc()">
+                                <option selected>Branches</option>
+                                <?php
+                                $sql = "SELECT DISTINCT 'branchs' FROM `initiative`";
+                                $run = mysqli_query($conn, $sql);
+                                while ($row = mysqli_fetch_assoc($run)) {
+                                ?>
+                                    <option value="<?php echo $row['branchs']; ?>"><?php echo $row['branchs'] ?></option>
+                                <?php
+                                } ?>
+                            </select>
+                        </div>
+                    </div> -->
+
+
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select" name="No_of_Members" id="insative" onchange="serchinc()">
+                            <option selected>Branches</option>
+                            <?php
+                            $sql = "SELECT DISTINCT `branchs` FROM `initiative`";
+                            $run = mysqli_query($conn, $sql);
+
+                            while ($row = mysqli_fetch_assoc($run)) {
+                            ?>
+                                <option value="<?php echo $row['branchs'] ?>"><?php echo $row['branchs'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select" name="No_of_Members" id="SDGfilter" onchange="SDGfilter()">
+                            <option selected>SDGs</option>
+                            <?php
+                            $sql = "SELECT  DISTINCT `catagury` FROM `initiative`";
+                            $run = mysqli_query($conn, $sql);
+
+                            while ($row = mysqli_fetch_assoc($run)) {
+                            ?>
+                                <option value="<?php echo $row['catagury'] ?>"><?php echo $row['catagury'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+
+
+                    <div class="col-sm-2">
+                        <select class="browser-default custom-select" name="No_of_Members" id="newserch" onchange="Datewise()">
+                            <option selected>Year</option>
+                            <?php
+                            $sql = "SELECT  DISTINCT `year` FROM `initiative`";
+                            $run = mysqli_query($conn, $sql);
+
+                            while ($row = mysqli_fetch_assoc($run)) {
+                            ?>
+                                <option value="<?php echo $row['year'] ?>"><?php echo $row['year'] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+
+
+                    <div class="col-sm-2">
+                        <button id="submit" name="submit" class="default-btn" type="submit">Reset</button>
+                    </div>
+
+                    <div id="serchdata">
+
+                    </div>
+
+
+
+                    <div class="col-sm-6">
+
+                    </div>
+
+
+                </div>
+            </form>
+            <div class="team-wrapper row">
+
+                <div class="col-lg-12 sm-padding">
+
+                    <div class="team-wrap row" id="new">
+                        <p id="loding" style="display:none;"></p>
+
+                        <?php
+
+                        $sql = "SELECT * FROM `initiative` WHERE status = 0";
+                        $rsult = mysqli_query($conn, $sql);
+                        while ($data = mysqli_fetch_assoc($rsult)) {
+                        ?>
+
+                            <div class="col-md-3 xs-padding">
+                                <a href="initiatives-data.php?id=<?php echo $data['id'] ?>">
+                                    <div class="team-details">
+                                        <img src="./Admin/Initiative_image/<?php echo $data['image'] ?>" alt="team" style="height: 250px; cursor: pointer;">
+                                        <div class="hover">
+
+                                        </div>
+                                    </div>
+                                </a>
+                                <p style="background: #fff; font-size: 20px; font-weight: 700; text-align: center; padding: 20px;"><?php echo $data['first_title'] ?></p>
+                            </div>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <section class="team-section bg-grey bd-bottom circle shape padding">
         <div class="container">
             <div class="section-heading text-center ">
@@ -209,8 +336,71 @@
                     </div>
                 </div>
                 <div class="col-lg-5 sm-padding">
-                    <h3>We are aiming to build a network of like-minded individuals whose passion is to make an impact through solving complex social problems. The network will not only consist of students but also mentors who can guide them achieve their goals and help them throughout the process. We are continously expanding the network with a goal to reach each and every college throughout the country.</h3>
+                    <h3>Samavesh is the Annual Meet of LiGHT which aimed to present each center's journey and their initiatives in the tenure. In the first edition of Samavesh, which was conducted in May 2022, 160+ volunteers had participated. Each center's struggle and success story helped in creating inter-center awareness and motivated the members to work effectively for the next tenure</h3>
                 </div>
+                <div class="col-lg-6 sm-padding">
+                    <div class="team-content">
+                        <!-- <h2>Who can join us?</h2>
+                        <h3>Join your hand with us for a better life and beautiful future.</h3>
+                        <p>The secret to happiness lies in helping others. Never underestimate the difference YOU can make in the lives of the poor, the abused and the helpless.</p>
+                        <ul class="check-list">
+                            <li><i class="fa fa-check"></i>Social Worker</li>
+                            <li><i class="fa fa-check"></i>College Student</li>
+                            <li><i class="fa fa-check"></i>College Proffesor</li>
+                            <li><i class="fa fa-check"></i>College</li>
+                        </ul>
+                        <a href="#" class="default-btn">Join With Us</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-bottom: 40px">
+            <div class="section-heading text-center " style="margin-bottom: 40px">
+                <h3>Awards</h3>
+                <!-- <span class="heading-border"></span> -->
+            </div><!-- /Section Heading -->
+            <div class="team-wrapper row">
+                <div class="col-lg-5 sm-padding">
+                    <h3>To felicitate the centres for their achievements, we present them with awards in the annual event 'Samavesh'. It helps the center's keep up their spirit and creates an healthy compitition among them. We presented the centres with the following awards: Most Impactful centre, Most events conducted by a centre, Emerging centre of the year, Most innovative event of the year, Social Strategy Development Competition winners, Promising centres</h3>
+                </div>
+                <div class="col-md-7 col-sm-6 xs-padding">
+
+
+
+                    <div id="testimonial-carousel2" class="testimonial-carousel owl-carousel">
+                        <a href="#">
+                            <div class="testimonial-item">
+                                <img src="gopali-img/1. Impactful_ LiGHT Samvedna.png" alt="profile">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="testimonial-item">
+                                <img src="gopali-img/2. SSD _ LiGHT Sindri and Wardha.png" alt="profile">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="testimonial-item">
+                                <img src="gopali-img/3. Most Events Conducted_ LiGHT Wardha.png" alt="profile">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="testimonial-item">
+                                <img src="gopali-img/4. Emerging Centre _ LiGHT Akola.png" alt="profile">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="testimonial-item">
+                                <img src="gopali-img/5. Innovative Centre _ LiGHT Samvedna.png" alt="profile">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="testimonial-item">
+                                <img src="gopali-img/6. Promising Centres.png" alt="profile">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="col-lg-6 sm-padding">
                     <div class="team-content">
                         <!-- <h2>Who can join us?</h2>
@@ -275,108 +465,7 @@
     </section> -->
 
 
-    <!-- Testimonial Section -->
-    <!-- <section class="team-section bg-grey bd-bottom padding">
-        <div class="container-fluid" id="filter">
-            <h3 class="text-center mb-40">All Events</h3>
-            <form action="" method="POST" class="form-horizontal">
-                <div class="form-group colum-row row">
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <select class="browser-default custom-select" name="No_of_Members" id="insative" onchange="serchinc()">
-                                <option selected>Branches</option>
-                                <?php
-                                $sql = "SELECT * FROM `initiative`";
-                                $run = mysqli_query($conn, $sql);
-                                while ($row = mysqli_fetch_assoc($run)) {
-                                ?>
-                                    <option value="<?php echo $row['branchs']; ?>"><?php echo $row['branchs'] ?></option>
-                                <?php
-                                } ?>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-2">
-                        <select class="browser-default custom-select" name="No_of_Members" id="newserch" onchange="Datewise()">
-                            <option selected>Year</option>
-
-                            <?php
-                            $sql = "SELECT * FROM `initiative`";
-                            $run = mysqli_query($conn, $sql);
-
-                            while ($row = mysqli_fetch_assoc($run)) {
-                            ?>
-                                <option value="<?php echo $row['year'] ?>"><?php echo $row['year'] ?></option>
-
-                            <?php
-                            }
-
-
-
-                            ?>
-
-                        </select>
-                    </div>
-
-
-                    <div class="col-sm-2">
-                        <button id="submit" name="submit" class="default-btn" type="submit">Reset</button>
-                    </div>
-
-                    <div id="serchdata">
-
-                    </div>
-
-
-
-                    <div class="col-sm-6">
-
-                    </div>
-
-
-                </div>
-            </form>
-            <div class="team-wrapper row">
-
-                <div class="col-lg-12 sm-padding">
-
-                    <div class="team-wrap row" id="new">
-                        <p id="loding" style="display:none;"></p>
-
-                        <?php
-
-                        $sql = "SELECT * FROM `initiative` WHERE status = 0";
-                        $rsult = mysqli_query($conn, $sql);
-                        while ($data = mysqli_fetch_assoc($rsult)) {
-                        ?>
-
-                            <div class="col-md-2.5 xs-padding">
-                                <a href="initiatives-data.php?id=<?php echo $data['id'] ?>">
-                                    <div class="team-details">
-                                        <img src="./Admin/Initiative_image/<?php echo $data['image'] ?>" alt="team" style="height: 250px; cursor: pointer;">
-                                        <div class="hover">
-
-                                        </div>
-                                    </div>
-                                </a>
-                                <p style="background: #fff; font-size: 20px; font-weight: 700; text-align: center; padding: 20px;"><?php echo $data['first_title'] . ' ' . $data['secound_title'] ?></p>
-                            </div>
-
-
-                        <?php
-                        }
-
-
-                        ?>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- /Team Section -->
     <?php include 'include/footer.php'; ?>
@@ -406,6 +495,29 @@
 
 
     <script type="text/javascript">
+        function SDGfilter() {
+            var x = document.getElementById("SDGfilter").value;
+            $.ajax({
+
+                url: "SDGfilter.php",
+                method: "POST",
+                data: {
+
+                    id: x
+                },
+
+                success: function(data) {
+
+                    $("#new").html(data);
+
+                }
+
+
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
         function serchinc() {
             var x = document.getElementById("insative").value;
             $.ajax({
@@ -427,7 +539,7 @@
             });
         }
     </script>
-
+<!-- 
     <script>
         $(document).ready(function() {
                     $('#fetchval').change(function() {
@@ -453,4 +565,4 @@
 
 
                     });
-    </script>
+    </script> -->
